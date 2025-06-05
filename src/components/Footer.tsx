@@ -68,15 +68,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-orange-400" />
-                <span className="text-gray-300 text-sm">123 Hope Street, City, Country</span>
+                <span className="text-gray-300 text-sm">Nairobi Street, Nairobi, Kenya</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-orange-400" />
-                <span className="text-gray-300 text-sm">+1 (555) 123-4567</span>
+                <span className="text-gray-300 text-sm">+254 (000) 000</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-orange-400" />
-                <span className="text-gray-300 text-sm">info@berurstreetcare.org</span>
+                <span className="text-gray-300 text-sm">info@berurstreetcare.com</span>
               </div>
             </div>
           </div>
@@ -84,7 +84,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © 2024 Berur Street Care International. All rights reserved. | 
+            © 2025 Berur Street Care International. All rights reserved. | 
             <span className="ml-1">Registered Charity Organization</span>
           </p>
         </div>
