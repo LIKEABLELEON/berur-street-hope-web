@@ -1,6 +1,17 @@
 
 import { useEffect } from 'react';
 
+// Declare Facebook SDK types
+declare global {
+  interface Window {
+    FB: {
+      XFBML: {
+        parse: () => void;
+      };
+    };
+  }
+}
+
 const FacebookPosts = () => {
   useEffect(() => {
     // Load Facebook SDK
