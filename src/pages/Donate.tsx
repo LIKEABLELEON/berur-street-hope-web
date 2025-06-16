@@ -1,4 +1,4 @@
-import { Heart, Shield, Users, CheckCircle, CreditCard, Banknote, Smartphone } from 'lucide-react';
+import { Heart, Shield, Users, CheckCircle, CreditCard, Banknote, Smartphone, Building } from 'lucide-react';
 import { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -181,6 +181,14 @@ const Donate = () => {
                     <input type="radio" name="payment" value="mobile" className="mr-3" />
                     <Smartphone className="h-5 w-5 text-gray-600 mr-3" />
                     <span className="font-medium">Mobile Money</span>
+                  </label>
+                  <label className="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                    <input type="radio" name="payment" value="vips" className="mr-3" />
+                    <Building className="h-5 w-5 text-gray-600 mr-3" />
+                    <div>
+                      <span className="font-medium">VIPS Transfer</span>
+                      <p className="text-sm text-gray-500">VIPS: 962430</p>
+                    </div>
                   </label>
                 </div>
               </div>
