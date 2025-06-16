@@ -15,12 +15,13 @@ const Footer = () => {
               </div>
               <div>
                 <h2 className="text-xl font-bold">Berur Street Care International</h2>
-                <p className="text-gray-400 text-sm">Transforming lives through God's love</p>
+                <p className="text-gray-400 text-sm">Education as a lasting way out of poverty</p>
               </div>
             </div>
             <p className="text-gray-300 mb-4 leading-relaxed">
-              We are a Christian-based non-profit organization dedicated to rehabilitating street children and families 
-              by providing food, accommodation, education, and most importantly, hope for a better future.
+              We believe in school and education as a lasting way out of poverty. 
+              We help street children from Eldoret, Kenya get the opportunity to go to school 
+              and build brighter futures through God's love.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -68,7 +69,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-orange-400" />
-                <span className="text-gray-300 text-sm">Nairobi Street, Nairobi, Kenya</span>
+                <span className="text-gray-300 text-sm">Eldoret, Kenya</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-orange-400" />
