@@ -1,8 +1,8 @@
-
 import { ArrowRight, Users, GraduationCap, Home as HomeIcon, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import FacebookPosts from '../components/FacebookPosts';
 
 const Home = () => {
   const stats = [
@@ -115,6 +115,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Facebook Posts Section */}
+      <FacebookPosts />
 
       {/* Call to Action */}
       <section className="py-20 bg-blue-600 text-white">
