@@ -1,5 +1,4 @@
 
-
 import { useEffect } from 'react';
 
 // Declare Facebook SDK types for TypeScript
@@ -18,7 +17,6 @@ const FacebookPosts = () => {
   // Effect hook to initialize Facebook SDK when component mounts
   useEffect(() => {
     // Check if Facebook SDK has loaded and FB object is available
-    // Load Facebook SDK
     if (window.FB) {
       // Parse all Facebook social plugins on the page
       // This makes the fb-post divs render as actual embedded posts
@@ -36,7 +34,7 @@ const FacebookPosts = () => {
   ];
 
   return (
-    {/* Main section container with padding and background */}
+    // Main section container with padding and background
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header with title and description */}
@@ -80,4 +78,3 @@ const FacebookPosts = () => {
 };
 
 export default FacebookPosts;
-
