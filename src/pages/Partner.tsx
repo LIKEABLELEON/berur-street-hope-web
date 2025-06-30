@@ -130,9 +130,17 @@ This inquiry was submitted through the Berur Street Care International website.
     <div className="min-h-screen bg-white">
       <Header />
       
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600 to-green-800 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Hero Section with Real Photo Background */}
+      <section className="relative py-20 bg-gradient-to-r from-green-600 to-green-800 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute right-0 top-0 w-1/2 h-full opacity-30">
+          <img
+            src="/lovable-uploads/81c12ec2-957b-448b-8673-086e43e06fbd.png"
+            alt="Community support and partnerships"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Partner With Us</h1>
             <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
@@ -143,7 +151,7 @@ This inquiry was submitted through the Berur Street Care International website.
         </div>
       </section>
 
-      {/* Why Partner */}
+      {/* Why Partner with Impact Photos */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -156,6 +164,13 @@ This inquiry was submitted through the Berur Street Care International website.
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
+              <div className="mb-6">
+                <img
+                  src="/lovable-uploads/4ce616f2-dd54-4171-9845-db3bc1d32daf.png"
+                  alt="Educational impact"
+                  className="w-full h-48 object-cover rounded-lg shadow-lg"
+                />
+              </div>
               <div className="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Users className="h-10 w-10 text-green-600" />
               </div>
@@ -167,6 +182,13 @@ This inquiry was submitted through the Berur Street Care International website.
             </div>
 
             <div className="text-center">
+              <div className="mb-6">
+                <img
+                  src="/lovable-uploads/a41c146c-4592-4ecd-867a-2863e9b519a3.png"
+                  alt="Community activities"
+                  className="w-full h-48 object-cover rounded-lg shadow-lg"
+                />
+              </div>
               <div className="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Globe className="h-10 w-10 text-blue-600" />
               </div>
@@ -178,6 +200,13 @@ This inquiry was submitted through the Berur Street Care International website.
             </div>
 
             <div className="text-center">
+              <div className="mb-6">
+                <img
+                  src="/lovable-uploads/f9302e31-990d-4a5d-b3db-535caea9597f.png"
+                  alt="Celebrating achievements"
+                  className="w-full h-48 object-cover rounded-lg shadow-lg"
+                />
+              </div>
               <div className="bg-orange-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Award className="h-10 w-10 text-orange-600" />
               </div>
