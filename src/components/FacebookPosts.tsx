@@ -3,14 +3,14 @@ const FacebookPosts = () => {
   // Array of Facebook post iframes to embed
   const postIframes = [
     {
-      src: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0n6WqaKVryv1AfyTow4CLAEtWSe91u34pePzjkeKKuGQea8EQdQAa6VPEtQi2MdVQl%26id%3D100064422830485&show_text=true&width=500",
+      src: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02eGduAovMF94ChT3if956TeSoByBRCdwFrUm9Wd98rnWU7PMhdneJvJYVaAH12eNNl%26id%3D100064422830485&show_text=true&width=500",
       width: "500",
-      height: "250"
+      height: "640"
     },
     {
-      src: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0dtgp8Xkuv3QyPsE7tCy8nhxQovgdGGLP2dcCyojVYUV9kRtw7aTdbzQ8d62SR5GGl%26id%3D100064422830485&show_text=true&width=500",
+      src: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02ztAEjR1C7Kvp8AakHhSyaGy6CYxgfJAuHtm2QUjctCbQ2mCaqc8GVVvbrf2FzazNl%26id%3D100064422830485&show_text=true&width=500",
       width: "500",
-      height: "250"
+      height: "684"
     },
     {
       src: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02C6ciBj72uhPXU1FAWXLYCM1TasM7knUu24gvbuPF22wCmB1dT1DwJrWubDPhmgwel%26id%3D100064422830485&show_text=true&width=500",
