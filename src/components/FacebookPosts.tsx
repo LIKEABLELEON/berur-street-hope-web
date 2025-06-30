@@ -1,36 +1,22 @@
 
-import { useEffect } from 'react';
-
-// Declare Facebook SDK types for TypeScript
-// This tells TypeScript that window.FB exists and what methods it has
-declare global {
-  interface Window {
-    FB: {
-      XFBML: {
-        parse: () => void;
-      };
-    };
-  }
-}
-
 const FacebookPosts = () => {
-  // Effect hook to initialize Facebook SDK when component mounts
-  useEffect(() => {
-    // Check if Facebook SDK has loaded and FB object is available
-    if (window.FB) {
-      // Parse all Facebook social plugins on the page
-      // This makes the fb-post divs render as actual embedded posts
-      window.FB.XFBML.parse();
+  // Array of Facebook post iframes to embed
+  const postIframes = [
+    {
+      src: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0n6WqaKVryv1AfyTow4CLAEtWSe91u34pePzjkeKKuGQea8EQdQAa6VPEtQi2MdVQl%26id%3D100064422830485&show_text=true&width=500",
+      width: "500",
+      height: "250"
+    },
+    {
+      src: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0dtgp8Xkuv3QyPsE7tCy8nhxQovgdGGLP2dcCyojVYUV9kRtw7aTdbzQ8d62SR5GGl%26id%3D100064422830485&show_text=true&width=500",
+      width: "500",
+      height: "250"
+    },
+    {
+      src: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02C6ciBj72uhPXU1FAWXLYCM1TasM7knUu24gvbuPF22wCmB1dT1DwJrWubDPhmgwel%26id%3D100064422830485&show_text=true&width=500",
+      width: "500",
+      height: "607"
     }
-  }, []); // Empty dependency array means this runs once on mount
-
-  // Array of Facebook post URLs to embed
-  // These are placeholder URLs - replace with actual post URLs from your Facebook page
-  const posts = [
-    // Example post URLs - you'll need to replace these with actual post URLs from your Facebook page
-    "https://www.facebook.com/permalink.php?story_fbid=pfbid02Example1&id=100064422830485",
-    "https://www.facebook.com/permalink.php?story_fbid=pfbid02Example2&id=100064422830485",
-    "https://www.facebook.com/permalink.php?story_fbid=pfbid02Example3&id=100064422830485"
   ];
 
   return (
@@ -47,16 +33,20 @@ const FacebookPosts = () => {
         
         {/* Grid layout for Facebook posts - responsive design */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Map through posts array to create embedded Facebook posts */}
-          {posts.map((postUrl, index) => (
+          {/* Map through post iframes to create embedded Facebook posts */}
+          {postIframes.map((post, index) => (
             <div key={index} className="flex justify-center">
-              {/* Facebook post embed div - Facebook SDK converts this to actual post */}
-              <div 
-                className="fb-post" 
-                data-href={postUrl}        // URL of the Facebook post to embed
-                data-width="350"           // Width of the embedded post
-                data-show-text="true"      // Show post text content
-              ></div>
+              {/* Facebook post iframe embed */}
+              <iframe 
+                src={post.src}
+                width={post.width}
+                height={post.height}
+                style={{ border: 'none', overflow: 'hidden' }}
+                scrolling="no"
+                frameBorder="0"
+                allowFullScreen={true}
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              />
             </div>
           ))}
         </div>
