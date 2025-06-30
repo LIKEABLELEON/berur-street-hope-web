@@ -75,9 +75,55 @@ const Partner = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Partnership inquiry:', formData);
-    alert('Thank you for your interest! We will contact you within 48 hours.');
+    
+    // Format the partnership type for display
+    const getPartnershipTypeDisplay = (type: string) => {
+      switch (type) {
+        case 'corporate': return 'Corporate Partnership';
+        case 'community': return 'Community Partnership';
+        case 'international': return 'International Partnership';
+        case 'professional': return 'Professional Services';
+        case 'other': return 'Other';
+        default: return type;
+      }
+    };
+
+    // Create email body with formatted information
+    const emailBody = `
+Partnership Inquiry - ${formData.organizationName}
+
+Organization Details:
+• Organization Name: ${formData.organizationName}
+• Contact Person: ${formData.contactName}
+• Email: ${formData.email}
+• Phone: ${formData.phone || 'Not provided'}
+• Partnership Type: ${getPartnershipTypeDisplay(formData.partnershipType)}
+
+Partnership Goals:
+${formData.message}
+
+---
+This inquiry was submitted through the Berur Street Care International website.
+    `.trim();
+
+    // Create mailto link
+    const mailtoLink = `mailto:kariukileon@gmail.com?subject=Partnership Inquiry - ${encodeURIComponent(formData.organizationName)}&body=${encodeURIComponent(emailBody)}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Show confirmation
+    alert('Your email client will open with the partnership inquiry. Please send the email to complete your submission.');
+    
+    // Reset form
+    setFormData({
+      organizationName: '',
+      contactName: '',
+      email: '',
+      phone: '',
+      partnershipType: '',
+      message: ''
+    });
   };
 
   return (
@@ -325,7 +371,7 @@ const Partner = () => {
               </form>
 
               <p className="text-sm text-gray-500 text-center mt-6">
-                We'll review your partnership inquiry and get back to you within 48 hours.
+                Clicking submit will open your email client with a pre-formatted message to send to kariukileon@gmail.com
               </p>
             </div>
           </div>

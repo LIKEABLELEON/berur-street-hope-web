@@ -1,45 +1,8 @@
 import { Heart, Shield, Users, CheckCircle } from 'lucide-react';
-import { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const Donate = () => {
-  const [selectedAmount, setSelectedAmount] = useState<number | null>(50);
-  const [customAmount, setCustomAmount] = useState<string>('');
-  const [donationType, setDonationType] = useState<'monthly' | 'once'>('once');
-
-  const presetAmounts = [25, 50, 100, 250, 500];
-
-  const impactExamples = [
-    { amount: 25, impact: 'Provides meals for one child for a week' },
-    { amount: 50, impact: 'Covers educational materials for one student for a month' },
-    { amount: 100, impact: 'Provides safe shelter for a family for one night' },
-    { amount: 250, impact: 'Supports a child\'s education for an entire semester' },
-    { amount: 500, impact: 'Funds vocational training for one adult' },
-  ];
-
-  const handleAmountSelect = (amount: number) => {
-    setSelectedAmount(amount);
-    setCustomAmount('');
-  };
-
-  const handleCustomAmountChange = (value: string) => {
-    setCustomAmount(value);
-    setSelectedAmount(null);
-  };
-
-  const getCurrentAmount = () => {
-    return customAmount ? parseFloat(customAmount) : selectedAmount;
-  };
-
-  const getImpactText = () => {
-    const amount = getCurrentAmount();
-    if (!amount) return '';
-    
-    const closestImpact = impactExamples.find(item => item.amount <= amount) || impactExamples[0];
-    return closestImpact.impact;
-  };
-
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -77,89 +40,28 @@ const Donate = () => {
         </div>
       </section>
 
-      {/* Donation Form */}
+      {/* Your Impact Section */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
             <div className="p-8">
               <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Choose Your Donation</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Your Impact</h2>
                 <p className="text-lg text-gray-600">
                   Every contribution helps transform lives and build stronger communities.
                 </p>
               </div>
 
-              {/* Donation Type Toggle */}
-              <div className="flex justify-center mb-8">
-                <div className="bg-gray-100 p-1 rounded-lg">
-                  <button
-                    onClick={() => setDonationType('once')}
-                    className={`px-6 py-2 rounded-md font-medium transition-colors ${
-                      donationType === 'once'
-                        ? 'bg-white text-orange-600 shadow-sm'
-                        : 'text-gray-600 hover:text-gray-900'
-                    }`}
-                  >
-                    One-time
-                  </button>
-                  <button
-                    onClick={() => setDonationType('monthly')}
-                    className={`px-6 py-2 rounded-md font-medium transition-colors ${
-                      donationType === 'monthly'
-                        ? 'bg-white text-orange-600 shadow-sm'
-                        : 'text-gray-600 hover:text-gray-900'
-                    }`}
-                  >
-                    Monthly
-                  </button>
-                </div>
-              </div>
-
-              {/* Amount Selection */}
-              <div className="mb-8">
-                <label className="block text-lg font-semibold text-gray-900 mb-4">
-                  Select Amount (USD)
-                </label>
-                <div className="grid grid-cols-3 md:grid-cols-5 gap-4 mb-4">
-                  {presetAmounts.map((amount) => (
-                    <button
-                      key={amount}
-                      onClick={() => handleAmountSelect(amount)}
-                      className={`p-4 rounded-lg border-2 font-semibold transition-colors ${
-                        selectedAmount === amount
-                          ? 'border-orange-600 bg-orange-50 text-orange-600'
-                          : 'border-gray-200 hover:border-orange-300 text-gray-900'
-                      }`}
-                    >
-                      ${amount}
-                    </button>
-                  ))}
-                </div>
-                
-                <div className="relative">
-                  <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 text-lg">$</span>
-                  <input
-                    type="number"
-                    placeholder="Other amount"
-                    value={customAmount}
-                    onChange={(e) => handleCustomAmountChange(e.target.value)}
-                    className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-lg"
-                  />
-                </div>
-              </div>
-
-              {/* Impact Text */}
-              {getCurrentAmount() && (
-                <div className="bg-blue-50 p-4 rounded-lg mb-8">
-                  <div className="flex items-start space-x-3">
-                    <Heart className="h-6 w-6 text-blue-600 mt-0.5" />
-                    <div>
-                      <p className="font-semibold text-blue-900">Your Impact:</p>
-                      <p className="text-blue-800">${getCurrentAmount()} {getImpactText()}</p>
-                    </div>
+              {/* Impact Information */}
+              <div className="bg-blue-50 p-6 rounded-lg mb-8">
+                <div className="flex items-start space-x-3">
+                  <Heart className="h-6 w-6 text-blue-600 mt-0.5" />
+                  <div>
+                    <p className="font-semibold text-blue-900 text-lg">Your Impact:</p>
+                    <p className="text-blue-800 text-lg">$100 provides meals for one child for a week</p>
                   </div>
                 </div>
-              )}
+              </div>
 
               {/* Payment Accounts Banner */}
               <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-6 rounded-lg">
