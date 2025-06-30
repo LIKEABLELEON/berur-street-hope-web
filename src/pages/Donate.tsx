@@ -1,4 +1,4 @@
-import { Heart, Shield, Users, CheckCircle, CreditCard, Banknote, Smartphone, Building } from 'lucide-react';
+import { Heart, Shield, Users, CheckCircle } from 'lucide-react';
 import { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -161,49 +161,27 @@ const Donate = () => {
                 </div>
               )}
 
-              {/* Payment Methods */}
-              <div className="mb-8">
-                <label className="block text-lg font-semibold text-gray-900 mb-4">
-                  Payment Method
-                </label>
+              {/* Payment Accounts Banner */}
+              <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-6 rounded-lg">
+                <h3 className="text-xl font-semibold mb-4 text-center">Payment Accounts</h3>
                 <div className="space-y-3">
-                  <label className="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
-                    <input type="radio" name="payment" value="card" defaultChecked className="mr-3" />
-                    <CreditCard className="h-5 w-5 text-gray-600 mr-3" />
-                    <span className="font-medium">Credit/Debit Card</span>
-                  </label>
-                  <label className="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
-                    <input type="radio" name="payment" value="bank" className="mr-3" />
-                    <Banknote className="h-5 w-5 text-gray-600 mr-3" />
-                    <span className="font-medium">Bank Transfer</span>
-                  </label>
-                  <label className="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
-                    <input type="radio" name="payment" value="mobile" className="mr-3" />
-                    <Smartphone className="h-5 w-5 text-gray-600 mr-3" />
-                    <span className="font-medium">Mobile Money</span>
-                  </label>
-                  <label className="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
-                    <input type="radio" name="payment" value="vips" className="mr-3" />
-                    <Building className="h-5 w-5 text-gray-600 mr-3" />
-                    <div>
-                      <span className="font-medium">VIPS Transfer</span>
-                      <p className="text-sm text-gray-500">VIPS: 962430</p>
-                    </div>
-                  </label>
+                  <div className="bg-white bg-opacity-10 p-4 rounded-lg">
+                    <p className="font-medium">VIPS Transfer</p>
+                    <p className="text-blue-100">962430</p>
+                  </div>
+                  <div className="bg-white bg-opacity-10 p-4 rounded-lg">
+                    <p className="font-medium">Mpesa Paybill</p>
+                    <p className="text-blue-100">Paybill: 0000, Account Number: 1111</p>
+                  </div>
+                  <div className="bg-white bg-opacity-10 p-4 rounded-lg">
+                    <p className="font-medium">PayPal Account</p>
+                    <p className="text-blue-100">berurstreetcare@gmail.com</p>
+                  </div>
                 </div>
               </div>
 
-              {/* Donate Button */}
-              <button
-                className="w-full bg-orange-600 hover:bg-orange-700 text-white text-xl font-semibold py-4 rounded-lg transition-colors"
-                disabled={!getCurrentAmount()}
-              >
-                Donate ${getCurrentAmount() || 0} {donationType === 'monthly' ? 'Monthly' : 'Now'}
-              </button>
-
               <p className="text-sm text-gray-500 text-center mt-4">
-                Your donation is secure and processed through encrypted channels. 
-                You will receive a receipt via email for tax purposes.
+                After making your donation, please send us a confirmation message with your payment details.
               </p>
             </div>
           </div>
