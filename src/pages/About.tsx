@@ -88,19 +88,19 @@ const About = () => {
     {
       name: 'Silas Koech',
       role: 'Co-Founder',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+      image: 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
       bio: 'Co-founder of Berur Street Care International, dedicated to transforming lives of street children and youth in Eldoret.'
     },
     {
       name: 'Kirsten Vårdal',
       role: 'Co-Founder',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b77c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
       bio: 'Co-founder from Norway, instrumental in establishing the organization with financial and strategic support.'
     },
     {
       name: 'Karianne Wergeland',
       role: 'Co-Founder',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+      image: 'https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
       bio: 'Co-founder from Norway, committed to supporting vulnerable children and families in Eldoret.'
     }
   ];
