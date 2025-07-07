@@ -1,3 +1,4 @@
+
 // Import necessary React icons and routing components
 import { ArrowRight, Users, GraduationCap, Home as HomeIcon, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -15,26 +16,6 @@ const Home = () => {
     { icon: HomeIcon, label: 'Families Housed', value: '150+' },
     { icon: GraduationCap, label: 'Students Educated', value: '300+' },
     { icon: Heart, label: 'Years of Service', value: '10+' },
-  ];
-
-  // Programs data array - showcases the main services offered by the organization
-  // Each program has a title, description, and representative image
-  const programs = [
-    {
-      title: 'Emergency Food & Shelter',
-      description: 'Providing immediate relief with nutritious meals and safe accommodation for street children and families.',
-      image: 'https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-    },
-    {
-      title: 'Education & Skills Training',
-      description: 'Offering quality education and vocational training to break the cycle of poverty and build brighter futures.',
-      image: 'https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-    },
-    {
-      title: 'Family Rehabilitation',
-      description: 'Comprehensive support programs that help reunite families and provide long-term stability.',
-      image: 'https://images.unsplash.com/photo-1531983412531-1f49a365ffed?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-    }
   ];
 
   // Photo gallery array - contains real photos from the organization's work
@@ -160,39 +141,6 @@ const Home = () => {
                 <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
                 {/* Stat label description */}
                 <div className="text-gray-600">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Programs Section - Details about services offered */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Section header with title and description */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Programs</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We provide comprehensive support to address the immediate and long-term needs of street children and their families in Eldoret.
-            </p>
-          </div>
-          
-          {/* Responsive grid layout for program cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Map through programs array to create program cards */}
-            {programs.map((program, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                {/* Program image */}
-                <img
-                  src={program.image}
-                  alt={program.title}
-                  className="w-full h-48 object-cover"
-                />
-                {/* Program content */}
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{program.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{program.description}</p>
-                </div>
               </div>
             ))}
           </div>
