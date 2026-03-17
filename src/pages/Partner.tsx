@@ -59,7 +59,8 @@ const Partner = () => {
         'Pro bono service recognition',
         'Skill-based volunteering',
         'Professional development',
-        'Direct service impact'
+        'Direct service impact',
+        'Networking with like-minded professionals'
       ]
     }
   ];
