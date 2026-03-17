@@ -47,7 +47,8 @@ const Partner = () => {
         'Knowledge and experience exchange',
         'Joint international programs',
         'Funding and grant opportunities',
-        'Global impact expansion'
+        'Global impact expansion',
+        'Cross-cultural learning and capacity building'
       ]
     },
     {
