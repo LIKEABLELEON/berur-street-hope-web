@@ -35,7 +35,8 @@ const Partner = () => {
         'Collaborative program development',
         'Resource sharing opportunities',
         'Joint fundraising events',
-        'Expanded community network'
+        'Expanded community network',
+        'Co-branded community outreach initiatives'
       ]
     },
     {
