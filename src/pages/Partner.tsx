@@ -23,7 +23,8 @@ const Partner = () => {
         'Brand visibility in our programs and events',
         'Employee volunteer opportunities',
         'Tax benefits and CSR reporting',
-        'Community impact recognition'
+        'Community impact recognition',
+        'Annual partnership impact report'
       ]
     },
     {
