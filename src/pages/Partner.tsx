@@ -23,7 +23,8 @@ const Partner = () => {
         'Brand visibility in our programs and events',
         'Employee volunteer opportunities',
         'Tax benefits and CSR reporting',
-        'Community impact recognition'
+        'Community impact recognition',
+        'Annual partnership impact report'
       ]
     },
     {
@@ -34,7 +35,8 @@ const Partner = () => {
         'Collaborative program development',
         'Resource sharing opportunities',
         'Joint fundraising events',
-        'Expanded community network'
+        'Expanded community network',
+        'Co-branded community outreach initiatives'
       ]
     },
     {
@@ -45,7 +47,8 @@ const Partner = () => {
         'Knowledge and experience exchange',
         'Joint international programs',
         'Funding and grant opportunities',
-        'Global impact expansion'
+        'Global impact expansion',
+        'Cross-cultural learning and capacity building'
       ]
     },
     {
@@ -56,7 +59,8 @@ const Partner = () => {
         'Pro bono service recognition',
         'Skill-based volunteering',
         'Professional development',
-        'Direct service impact'
+        'Direct service impact',
+        'Networking with like-minded professionals'
       ]
     }
   ];
